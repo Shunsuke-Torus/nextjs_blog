@@ -5,9 +5,9 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'Shun'
-export const siteTitle = 'Next_Blog'
+const siteTitle = 'Next_Blog'
 
-export default function Layout({ children, home }) {
+const Layout = ({ children, home }) =>{
   return (
     <div className={styles.container}>
       <Head>
@@ -67,3 +67,6 @@ export default function Layout({ children, home }) {
     </div>
   )
 }
+
+export default Layout
+export {siteTitle}
