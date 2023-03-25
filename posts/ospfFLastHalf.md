@@ -7,10 +7,12 @@ date: '2022-07-27'
 * CCNA第4章相当 OSPF マルチエリア編
 
 ## 1 実験環境
-!["実験画像"](/images/ospfFirstHalf1.jpg)
+<image width="325" alt="実験画像" src="./../public/images/ospfFirstHalf1.jpg">
+
 #### 図1:実際に構築の際に用いた図
-図１をCiscoパケットトレーサーで再現し以下に示す。
-!["Ciscoのパケットトレーサーで再現したospfの設計画像"](/images/ospfFirstHalf2.jpg)
+図１をCiscoパケットトレーサーで再現し以下に示す。 
+
+<image width="325" alt="Ciscoのパケットトレーサーで再現したospfの設計画像" src="./../public/images/ospfFirstHalf2.jpg"> 
 
 #### 図2,Ciscoのパケットトレーサーで再現したospfの設計画像
 
@@ -18,7 +20,8 @@ date: '2022-07-27'
 ## 2 実験内容
 
 * 実験1<br>
-        <p>show ip ospf neighborコマンドを実行すると、どのルータがDR、BDR、DROTHERになるのか。</p>
+        show ip ospf neighborコマンドを実行すると、どのルータがDR、BDR、DROTHERになるのか。 
+
   * 結果
     ```
     RT1 
@@ -37,11 +40,12 @@ date: '2022-07-27'
     Neighbor ID     Pri   State           Dead Time   Address         Interface 
     10.10.10.2        1   FULL/BDR        00:00:32    192.168.150.1   GigabitEthernet0/0/0 
     
-    以上の結果より、RT2は同じプライオリティ値だった場合、ルータIDが大きい値をDRにして、低い値をBDRにすることが分かる。
     ```
+    **以上の結果より、RT2は同じプライオリティ値だった場合、ルータIDが大きい値をDRにして、低い値をBDRにすることが分かる。**
 ---
 * 実験2<br>
-        <p>show ip route コマンドを実行すると、どのように表示されるのか。</p>
+        show ip route コマンドを実行すると、どのように表示されるのか。 
+
   * 結果<br>
     ```
     RT1
@@ -90,8 +94,9 @@ date: '2022-07-27'
     C       　192.168.150.0/24 is directly connected, GigabitEthernet0/0/0
     L       　192.168.150.2/32 is directly connected, GigabitEthernet0/0/0
 
-    RT1の「O IA」を見るとRT3の172.16.30.0/24、192.168.150.0/24の情報を伝えられている事から、異なるエリアでもルート情報を得られていることが分かる。
     ```
+    **RT1の「O IA」を見るとRT3の172.16.30.0/24、192.168.150.0/24の情報を伝えられている事から、異なるエリアでもルート情報を得られていることが分かる。**
+
 ---
 ## 3 まとめ
 
