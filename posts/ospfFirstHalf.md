@@ -7,12 +7,12 @@ date: '2022-07-27'
 * CCNA第4章相当 OSPF シングルエリア編
   
 ## 1 実験環境
-<image width="325" alt="実験画像" src="/images/ospfFirstHalf1.jpg">
+!["実験画像"](/images/ospf1.jpg)
 
 #### 図1:実際に構築の際に用いた図
 図１をCiscoパケットトレーサーで再現し以下に示す。
 
-<image width="325" alt="Ciscoのパケットトレーサーで再現したospfの設計画像" src="/images/ospf2.jpg">
+!["Ciscoのパケットトレーサーで再現したospfの設計画像"](/images/ospf2.jpg)
 
 #### 図2,Ciscoのパケットトレーサーで再現したospfの設計画像
 * ルーターIDは、10.10.10.1~4 255.255.255.255
