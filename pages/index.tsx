@@ -5,10 +5,12 @@ import {getSortedPostsData,AllPostsData} from "./../lib/Post"
 import Date from "./../components/date"
 import Link from "next/link"
 
+// トップページのコンポーネント
 type HomeProps = {
   allPostsData: AllPostsData[]
 }
 
+// データを取得してpropsに渡す
 const getStaticProps = async() =>{
   const allPostsData = getSortedPostsData()
   return {

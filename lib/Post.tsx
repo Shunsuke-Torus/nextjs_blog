@@ -10,7 +10,8 @@ export type AllPostsData = {
     date:string
 }
 
-const postsDirectory = path.join(process.cwd(), 'posts');
+// path to the directory where our posts will be stored
+const postsDirectory = path.join(process.cwd(), 'posts'); 
 
 const getSortedPostsData = () =>{
     const fileNames = fs.readdirSync(postsDirectory)
@@ -40,14 +41,15 @@ const getSortedPostsData = () =>{
     })
 }
 
-const getAllPostIds = () =>{
-    const fileNames = fs.readdirSync(postsDirectory)
-    
-    return fileNames.map((fileName)=>{
+const getAllPostIds = () => {
+  const fileNames = fs.readdirSync(postsDirectory) // get all files in posts directory
+
+    return fileNames.map((fileName) => {
+    const id = fileName.replace(/\.md$/, '') // remove '.md' from file name to get id
         return {
-            params:{
-                id:fileName.replace(/\.md$/, '')
-            }
+            params: {
+            id,
+            },
         }
     })
 }
